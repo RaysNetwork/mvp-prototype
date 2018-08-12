@@ -1,0 +1,228 @@
+.whiteGradient{
+    background: linear-gradient(to bottom,white 85%,#c0c6dd);
+}
+.whiteGradient2{
+    background: linear-gradient(to bottom,white 60%,#c0c6dd);
+}
+.whiteGradient3{
+    background: linear-gradient(to top,white 60%,#c0c6dd);
+}
+.text-uppercase{
+    font-family: 'Russo One', sans-serif;
+}
+.bg-radient{
+    background:linear-gradient(to right,#43488e,#898cb7); 
+}
+.bg-gray{
+    background: #d4d6de;
+}
+.text-gray{
+    color: #d4d6de;
+}
+.bg-firstColor{
+    background: #85dadf;
+}
+.text-first{
+    color:#85dadf;
+}
+.round-2{
+border-bottom-left-radius: 25px;
+border-bottom-right-radius: 25px;
+}
+.round-4{
+    border-radius: 25px;
+}
+.bg-radient2{
+    background:linear-gradient(to left,#43488e,#898cb7); 
+}
+.navbarLinks{
+    list-style-type: none;
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+}
+.navbarLinks a{
+    text-decoration: none;
+    color:#85dadf;
+    display: block;
+    position: relative;
+}
+.navbarLinks a:hover::after,.navbarLinks a:active::after,.active::after{
+    width: 25%;
+    content: "";
+    border-top:  3px solid #85dadf;
+    position: absolute;
+    top: -2px;
+    left: 35%;
+}
+.navbarLinks a:hover::before,.navbarLinks a:active::before,.active::before{
+    width: 25%;
+    content: "";
+    border-bottom: 3px solid #85dadf;
+    position: absolute;
+    bottom: -2px;
+    left: 35%;
+}
+.navbarLinks li{
+    width: 100%;
+height: 100%;
+padding: 15px;
+}
+@media (min-width: 576px){
+    .navbarLinks{
+        flex-flow: row; 
+    }
+}
+#submit{
+background: #6ccbff;
+border: none;
+outline: none;
+border-radius: none;
+font-weight: bold;
+width: 50%;
+height: 40px;
+margin: auto;
+}
+/* check box color code */
+.cb {
+    display: none;
+  }
+  .label {
+    display: inline-block;
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .label:before {
+    line-height: 20px;
+    content: "";
+    display: inline-block;
+    margin: 2px auto;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    background-color: #6ccbff;
+    border: 1px solid #666666;
+  }
+  input[type=checkbox]:checked + .label:before {
+    content: "\2713";
+    font-weight: bolder;
+    color: #000000;
+    text-align: center;
+    line-height: 16px;
+  }
+.bg-radient{
+    background:linear-gradient(to right,#43488e,#898cb7); 
+}
+@media (min-width: 576px) {
+    .r4{
+        border-radius: 30px;
+    }
+    .r2{
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius:30px;
+    }
+  }
+
+.bgg{
+    background: linear-gradient(to bottom,white,#e3e3ed);
+}
+.bgg2{
+    background: linear-gradient(to top,white,#e3e3ed);
+}
+.sd{
+    box-shadow: 1px 1px 10px 2px rgb(190, 189, 189);
+}
+.fs{
+    font-size: 0.75em;
+}
+#raysSelect{
+    border-color: #43488e;
+}
+.p-button{
+    background: #43488e;
+    color: white;
+}
+.text-purpal{
+    color: #43488e;
+}
+.p-button:hover{
+    background: white;
+    color: #43488e;
+}
+.bg-Gray{
+    background: #ecedf3;
+}
+.bg-green-50{
+    background: #ecfceb;
+}
+.bg-green{
+    background: #ccfacb;
+}
+.bg-blue{
+    background: #cefafb;
+}
+.bg-red{
+    background: #fc9896;
+}
+.dataBelow{
+    font-size: 0.8em;
+    font-weight: bold;
+}
+.iconParent{
+    position: relative;
+    font-size: 1.5em;
+}
+.iconChild{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+a{
+    text-decoration: underline;
+    color: black;
+}
+.pinkBtn{
+    background: #fc9896;
+    font-weight: bold;
+    height: 50px;
+    color: black;
+
+}
+.pinkBtn:hover{
+    background: white;
+    color: #43488e;
+}
+.text-russone{
+    font-family: 'Russo One', sans-serif;
+}
+.greenBtn{
+    background: #ccfacb;
+    font-weight: bold;
+    height: 50px;
+    color: black;
+}
+.greenBtn:hover{
+    background: white;
+    color: #43488e;
+}
+#showhide{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translate(50%,-50%);
+}
+.eyeIcon{
+    color: #a5a5ab;
+    font-size: 2em;
+}
+#DigitalID{
+    background: #a5a5ab;
+}
+.tickIcon{
+    font-size: 5em;
+    color: #777bad;
+}
