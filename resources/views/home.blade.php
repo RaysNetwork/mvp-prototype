@@ -173,13 +173,13 @@
                         @foreach($deposites as $d)
                         <tr>
                             <td class="p-0">
-                                <input value="{{$d->target_key}}" type="text" class="w-100 bg-gray" id="depFrom1">
+                                <input value="{{$d->from_address}}" type="text" class="w-100 bg-gray" id="depFrom1">
                             </td>
                             <td class="p-0">
                                 <input value="{{$d->amount}}" type="text" class="w-100 bg-gray" id="depAmount1">
                             </td>
                             <td class="p-0">
-                                <input value="{{$d->balance}}" type="text" class="w-100 bg-gray" id="depBalance1">
+                                <input value="{{$d->to_balance}}" type="text" class="w-100 bg-gray" id="depBalance1">
                             </td>
                         </tr>
                         @endforeach
@@ -198,13 +198,13 @@
                         @foreach($withdrawals as $w)
                         <tr>
                             <td class="p-0">
-                                <input value="{{$w->target_key}}" type="text" class="w-100 bg-gray" id="withFrom1">
+                                <input value="{{$w->to_address}}" type="text" class="w-100 bg-gray" id="withFrom1">
                             </td>
                             <td class="p-0">
                                 <input value="{{$w->amount}}" type="text" class="w-100 bg-gray" id="withAmount1">
                             </td>
                             <td class="p-0">
-                                <input value="{{$d->balance}}" type="text" class="w-100 bg-gray" id="withBalance1">
+                                <input value="{{$w->from_balance}}" type="text" class="w-100 bg-gray" id="withBalance1">
                             </td>
                         </tr>
                             @endforeach

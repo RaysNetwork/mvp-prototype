@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ledger;
+use App\Transaction;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,17 +18,25 @@ class LedgerController extends Controller
             'digital_id' => 'required|numeric'
         ]);
 
-        $ledger = new Ledger;
-        $ledger->user_id = Auth::user()->id;
+        $toUser = User::where('public_key', $request->receiver_address)->first();
+
+        $ledger = new Transaction;
+        $ledger->to_address = $request->receiver_address;
         $ledger->amount = $request->amount;
-        $ledger->target_key = $request->receiver_address;
-        $ledger->type = 'deposit';
+        $ledger->from_address = Auth::user()->public_key;
+        $ledger->from_balance = Auth::user()->balance - $request->amount;
+        $ledger->to_balance = $toUser->balance + $request->amount;
 
         if($request->amount > Auth::user()->balance){
-            die("Shit balance none");
+            die("Oops no balance");
         }
 
         $ledger->save();
+        Auth::user()->balance = $ledger->from_balance;
+        Auth::user()->save();
+        $toUser->balance = $ledger->to_balance;
+        $toUser->save();
 
+        return redirect()->to('/home');
     }
 }

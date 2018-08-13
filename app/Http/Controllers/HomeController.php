@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Ledger;
+use App\Transaction;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,14 +27,12 @@ class HomeController extends Controller
     public function index(Request $request)
     {
         $data = [
-            'deposites' => Ledger::where('target_key', Auth::user()->public_key)
-                ->where('type', 'deposit')
+            'deposites' => Transaction::where('to_address', Auth::user()->public_key)
                 ->latest()
                 ->limit(4)
                 ->get(),
 
-            'withdrawals' => Ledger::where('user_id', Auth::user()->id)
-                ->where('type', 'withdraw')
+            'withdrawals' => Transaction::where('from_address', Auth::user()->public_key)
                 ->latest()
                 ->limit(3)
                 ->get()
